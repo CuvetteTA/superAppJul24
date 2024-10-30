@@ -102,12 +102,12 @@ const LoginPage = () => {
             <div
               style={{
                 color: "red",
-                height: "20px",
+                height: "15px",
               }}
             >
               {errors.name}
             </div>
-            <inputc
+            <input
               type="text"
               id="username"
               name="username"
