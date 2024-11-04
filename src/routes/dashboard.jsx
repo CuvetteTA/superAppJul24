@@ -40,7 +40,7 @@ const DashboardPage = () => {
   });
   const [isRunning, setIsRunning] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
-  
+
   const totalTime = useRef(0);
   const timerRef = useRef(null);
 
@@ -99,7 +99,7 @@ const DashboardPage = () => {
       setWeatherLoading(false);
     }
   };
-//  for data fetching from the API
+  //  for data fetching from the API
   useEffect(() => {
     fetchWeatherData();
     fetchNewsData();
@@ -153,9 +153,7 @@ const DashboardPage = () => {
           <p>Error fetching weather data</p>
         )}
 
-        <NotesCard
-          note={"This is how I am going to learn MERN Stack in next 3 months."}
-        />
+        <NotesCard note={localStorage.getItem("userNote")} />
 
         {newsLoading ? (
           <NewsSkeleton />
